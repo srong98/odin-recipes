@@ -1,0 +1,37 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-color: lightsalmon;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas:
+        "leftborder recipe rightborder";
+}
+#recipe {
+    grid-area: recipe;
+    display: grid;
+    grid-template-rows: 10% 20% 30% 20% 20%; 
+    grid-template-areas:
+        "header"
+        "image"
+        "description"
+        "ingredients"
+        "steps";
+}
+#cookie-image {
+    max-width: 30%;
+    grid-area: image;
+}
+#recipe-header {
+    text-align: center;
+    margin-top: 6vh;
+    font-family: "SIMPLIFICA", sans-serif;
+    font-size: 4vw;
+    grid-area: header;
+}
+@font-face {
+    font-family: "SIMPLIFICA";
+    src: url(../resources/SIMPLIFICA\ Typeface.ttf);
+}
