@@ -1,0 +1,97 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+body {
+    background-color: lightsalmon;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-areas:
+        "leftborder recipe rightborder";
+}
+.recipe {
+    grid-area: recipe;
+    display: grid;
+    grid-template-rows: 10% 18% 20% 15% 20%; 
+    grid-template-areas:
+        "header"
+        "image"
+        "description"
+        "ingredients"
+        "steps";
+}
+#crepe-image {
+    grid-area: image;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    max-width: 30%;
+    border-style: double;
+    border-color: white;
+    border-width: 1vw;
+    position: relative;
+}
+#recipe-header {
+    text-align: center;
+    margin-top: 6vh;
+    font-family: "SIMPLIFICA", sans-serif;
+    font-size: 56px;
+    grid-area: header;
+}
+.section-header {
+    text-align: center;
+    font-family: "SIMPLIFICA", sans-serif;
+    font-size: 42px;
+}
+.recipe-description {
+    grid-area: description;
+    position: relative;
+}
+#description-paragraph {
+    background-color: black;
+    border-style: double;
+    border-color: white;
+    border-width: 1vw;
+    color: white;
+    padding: 1vw;
+    text-align: center;
+    font-size: 16px;
+}
+.recipe-ingredients {
+    grid-area: ingredients;
+    position: relative;
+}
+.recipe-steps {
+    grid-area: steps;
+    position: relative;
+    top: 100px;
+}
+.lists {
+    background-color: black;
+    border-style: double;
+    border-color: white;
+    border-width: 1vw;
+    color: white;
+    padding: 1vw 2vw 1vw 2vw;
+    font-size: 16px;
+}
+.lists:hover {
+    animation-name: box-hover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+#description-paragraph:hover {
+    animation-name: box-hover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+@font-face {
+    font-family: "SIMPLIFICA";
+    src: url(../resources/SIMPLIFICA\ Typeface.ttf);
+}
+@keyframes box-hover {
+    100% {
+        transform: scale(1.2);
+    }
+}
