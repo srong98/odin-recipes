@@ -7,45 +7,33 @@ body {
 }
 #left {
     grid-area: left;
-    display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-areas:
-        "toppictureleft"
-        "bottompictureleft";
-    height: 100%;
-}
-#top-picture-left {
-    grid-area: toppictureleft;
 }
 #cookie-image {
     max-width: 80%;
-    height: auto;
-    position: relative;
-    top: 10%;
-    left: 7vw;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50%;
     border-style: double;
     border-color: aliceblue;
     border-width: 1vmin;
 }
-#cookie-image:hover {
-    animation-name: cookie-hover;
+img:hover {
+    animation-name: image-hover;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
-@keyframes cookie-hover {
+@keyframes image-hover {
     100% {
         transform: scale(1.1);
     }
 }
-#bottom-picture-left {
-    grid-area: bottompictureleft;
-}
 #crepes-image {
-    max-width: 80%;
-    height: auto;
-    position: relative;
-    top: 26%;
-    left: 7vw;
+    max-width: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 14%;
     border-style: double;
     border-color: aliceblue;
     border-width: 1vmin;
@@ -58,9 +46,19 @@ body {
 }
 #index-title {
     text-align: center;
-    margin-top: 6vh;
+    margin-top: 8vh;
     font-family: "SIMPLIFICA", sans-serif;
     font-size: 5vw;
+}
+#waffle-image {
+    max-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50%;
+    border-style: double;
+    border-color: aliceblue;
+    border-width: 1vmin;
 }
 @font-face {
     font-family: "SIMPLIFICA";
