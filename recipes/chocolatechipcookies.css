@@ -9,10 +9,10 @@ body {
     grid-template-areas:
         "leftborder recipe rightborder";
 }
-#recipe {
+.recipe {
     grid-area: recipe;
     display: grid;
-    grid-template-rows: 10% 20% 30% 20% 20%; 
+    grid-template-rows: 10% 18% 20% 15% 20%; 
     grid-template-areas:
         "header"
         "image"
@@ -21,17 +21,101 @@ body {
         "steps";
 }
 #cookie-image {
-    max-width: 30%;
     grid-area: image;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0%;
+    max-width: 30%;
+    border-style: double;
+    border-color: white;
+    border-width: 1vw;
+    position: relative;
 }
 #recipe-header {
     text-align: center;
     margin-top: 6vh;
     font-family: "SIMPLIFICA", sans-serif;
-    font-size: 4vw;
+    font-size: 56px;
     grid-area: header;
+}
+.recipe-description {
+    grid-area: description;
+    position: relative;
+}
+#description-header {
+    text-align: center; 
+    font-family: "SIMPLIFICA", sans-serif;
+    font-size: 42px; 
+}
+#description-paragraph {
+    background-color: black;
+    border-style: double;
+    border-color: white;
+    border-width: 1vw;
+    color: white;
+    padding: 1vw;
+    text-align: center;
+    font-size: 16px;
+}
+#description-paragraph:hover {
+    animation-name: box-hover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.recipe-ingredients {
+    grid-area: ingredients;
+    position: relative;
+}
+#ingredient-header {
+    text-align: center;
+    font-family: "SIMPLIFICA", sans-serif;
+    font-size: 42px;
+}
+#ingredient-list {
+    background-color: black;
+    border-style: double;
+    border-color: white;
+    border-width: 1vw;
+    color: white;
+    padding: 1vw 2vw 1vw 2vw;
+    font-size: 16px;
+}
+#ingredient-list:hover {
+    animation-name: box-hover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+.recipe-steps {
+    grid-area: steps;
+    position: relative;
+    top: 180px;
+}
+#steps-header {
+    text-align: center;
+    font-family: "SIMPLIFICA", sans-serif;
+    font-size: 42px;
+}
+#steps-list {
+    background-color: black;
+    border-style: double;
+    border-color: white;
+    border-width: 1vw;
+    color: white;
+    padding: 1vw 2vw 1vw 2vw;
+    font-size: 16px;
+}
+#steps-list:hover {
+    animation-name: box-hover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 @font-face {
     font-family: "SIMPLIFICA";
     src: url(../resources/SIMPLIFICA\ Typeface.ttf);
+}
+@keyframes box-hover {
+    100% {
+        transform: scale(1.2);
+    }
 }
