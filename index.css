@@ -1,66 +1,59 @@
-body {
-    background-color: lightsalmon;
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
-    grid-template-areas: 
-        "left middle right";
+html {
+    margin: 0px;
+    height: 100%;
 }
-#left {
-    grid-area: left;
-}
-#cookie-image {
-    max-width: 80%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50%;
-    border-style: double;
-    border-color: aliceblue;
-    border-width: 1vmin;
-}
-img:hover {
-    animation-name: image-hover;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-@keyframes image-hover {
-    100% {
-        transform: scale(1.1);
-    }
-}
-#crepes-image {
-    max-width: 65%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 14%;
-    border-style: double;
-    border-color: aliceblue;
-    border-width: 1vmin;
-}
-#middle {
-    grid-area: middle;
-}
-#right {
-    grid-area: right;
-}
-#index-title {
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
     text-align: center;
-    margin-top: 8vh;
-    font-family: "SIMPLIFICA", sans-serif;
-    font-size: 5vw;
+    font-family: "SIMPLIFICA", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-#waffle-image {
-    max-width: 80%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50%;
-    border-style: double;
-    border-color: aliceblue;
-    border-width: 1vmin;
+footer {
+    font-family: initial;
+    background: linear-gradient(rgb(43, 43, 43),rgb(22, 22, 22));
+    padding: 15px;
+    color: white;
+}
+.main,
+.link-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main {
+    flex-direction: column;
+    max-width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgb(255, 137, 124), rgb(167, 84, 74));
+}
+.link-container {
+    column-gap: 100px;
+    margin-top: -200px;
+}
+.page-link img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border: 5px double white;
+    border-radius: 50%;
+}
+.page-link img:hover {
+    animation-name: boxshadow;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+.page-link h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 @font-face {
     font-family: "SIMPLIFICA";
-    src: url(resources/SIMPLIFICA\ Typeface.ttf);
+    src: url(./resources/SIMPLIFICA\ Typeface.ttf);
+}
+@keyframes boxshadow {
+    100% {
+        box-shadow: 0px 0px 50px white;
+    }
 }
